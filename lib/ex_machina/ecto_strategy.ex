@@ -124,6 +124,9 @@ defmodule ExMachina.EctoStrategy do
       %{__struct__: Ecto.Association.NotLoaded} ->
         assoc
 
+      %{__struct__: Ash.NotLoaded} ->
+        assoc
+
       %{__struct__: _} ->
         cast(assoc)
 
